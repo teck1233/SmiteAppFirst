@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Smite Match Stats</title>
+    <style>
+    .my{
+    background: #98FB98;
+    }
+     .enemy{
+    background: #FA8072;
+    }
+    .form-control {
+    height: 800px;
+    }
+.third div{
+ display:inline-block;
+ top: 0px;
+}
+.second {
+position: absolute;
+}
+.table-summary {
+position: absolute;
+left: 620px;
+}
+
+  </style>
+</head>
+<body>
+<div>
+    <form th:method="POST" th:action="@{/smite/smiteplayer}" >
+        <div class="first">
+            <label for="mode" >Enter mode name </label>
+            <input type="text" name="mode" id="mode" value=""/>
+            <br/>
+        </div>
+
+
+
+
+        <input type="submit" value="Go!"/>
+
+    </form>
+</div>
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Smite Builder</title>
+    <style>
+    .form-control {
+    height: 800px;
+    }
+.third div{
+ display:inline-block;
+ top: 0px;
+}
+.opops {
+color:red;
+position: absolute;
+bottom: 400px;
+}
+.second {
+position: absolute;
+}
+.table-summary {
+position: absolute;
+left: 620px;
+}
+
+
+.opop7 {
+position: absolute;
+top: 120px;
+left: 500px;
+color: red;
+}
+
+  </style>
+</head>
+<body>
+
+
+<div>
+    <div>
+        <form th:method="POST" th:action="@{/smite/smitebuilder}" th:object="${smiteHero}">
+            <div>
+                <label for="name" >Enter god name </label>
+                <input type="text" name="name" id="name" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="role" >Enter god role </label>
+                <input type="text" name="role" id="role" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="mmr" >Enter mmr </label>
+                <input type="text" name="mmr" id="mmr" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy" >Enter enemy or 1</label>
+                <input type="text" name="enemy" id="enemy" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy1" >Enter enemy or 1</label>
+                <input type="text" name="enemy1" id="enemy1" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy2" >Enter enemy or 1</label>
+                <input type="text" name="enemy2" id="enemy2" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy3" >Enter enemy or 1</label>
+                <input type="text" name="enemy3" id="enemy3" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy4" >Enter enemy or 1</label>
+                <input type="text" name="enemy4" id="enemy4" value=""/>
+                <br/>
+            </div>
+
+
+            <input type="submit" value="Go!"/>
+
+        </form>
+    </div>
+
+
+
+    <div class="table-summary">
+        <table border="1">
+            <tr>
+                <th>1 slot</th>
+                <th>2 slot</th>
+                <th>3 slot</th>
+                <th>4 slot</th>
+                <th>5 slot</th>
+                <th>6 slot</th>
+                <th>7-8 slot</th>
+            </tr>
+
+
+            <tr th:each="item: ${items}">
+                <td  th:text="${item.item1}"></td>
+                <td  th:text="${item.item2}"></td>
+                <td  th:text="${item.item3}"></td>
+                <td  th:text="${item.item4}"></td>
+                <td  th:text="${item.item5}"></td>
+                <td  th:text="${item.item6}"></td>
+                <td  th:text="${item.item78}"></td>
+            </tr>
+
+
+
+
+
+        </table>
+    </div>
+
+</div>
+
+<div  class="opop7" th:text="${build}"></div>
+
+</body>
+</html>
+
+
+
+

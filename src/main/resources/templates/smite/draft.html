@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Draft</title>
+    <style>
+    .form-control {
+    height: 800px;
+    }
+.third div{
+ display:inline-block;
+ top: 0px;
+}
+.second {
+position: absolute;
+}
+.table-summary {
+position: absolute;
+left: 620px;
+}
+.table-summary1 {
+position: absolute;
+left: 1020px;
+}
+.table-summary2 {
+position: absolute;
+left: 1420px;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+<div>
+    <div>
+        <form th:method="POST" th:action="@{/smite/draft}" th:object="${smiteHero}">
+            <div>
+                <label for="mmr" >MMR</label>
+                <input type="text" name="mmr" id="mmr" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="role" >Role</label>
+                <input type="text" name="role" id="role" value=""/>
+                <br/>
+            </div>
+
+
+            <div>
+                <label for="enemy1" >Enter god name </label>
+                <input type="text" name="enemy1" id="enemy1" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy2" >Enter god name </label>
+                <input type="text" name="enemy2" id="enemy2" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy3" >Enter god name </label>
+                <input type="text" name="enemy3" id="enemy3" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy4" >Enter god name </label>
+                <input type="text" name="enemy4" id="enemy4" value=""/>
+                <br/>
+            </div>
+            <div>
+                <label for="enemy5" >Enter god name </label>
+                <input type="text" name="enemy5" id="enemy5" value=""/>
+                <br/>
+            </div>
+                <input type="submit" value="Go!"/>
+
+        </form>
+
+    </div>
+
+<div>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Winrate</th>
+
+        </tr>
+    <tr th:each="map: ${map}">
+        <td  th:text="${map.key}"></td>
+        <td  th:text="${map.value}"></td>
+    </tr>
+    </table>
+</div>
+
+
+</div>
+
+</body>
+</html>
+
+
+
+

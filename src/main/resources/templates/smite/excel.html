@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Dota Picker</title>
+
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/smite/excel}" th:object="${smiteHero}">
+    <div>
+        <label for="mmr" >mmr</label>
+        <input type="text" name="mmr" id="mmr" value=""/>
+        <br/>
+    </div>
+    <div>
+        <label for="mode" >mode</label>
+        <input type="text" name="mode" id="mode" value=""/>
+        <br/>
+    </div>
+
+    <input type="submit" value="Go!"/>
+
+</form>
+
+
+</body>
+</html>
+
+

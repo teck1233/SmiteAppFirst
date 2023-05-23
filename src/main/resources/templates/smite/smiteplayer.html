@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Smite Match Stats</title>
+    <style>
+    .my{
+    background: #98FB98;
+    }
+     .enemy{
+    background: #FA8072;
+    }
+    .form-control {
+    height: 800px;
+    }
+.third div{
+ display:inline-block;
+ top: 0px;
+}
+.second {
+position: absolute;
+}
+.table-summary {
+position: absolute;
+left: 620px;
+}
+
+  </style>
+</head>
+<body>
+<div>
+    <form th:method="POST" th:action="@{/smite/smiteplayer}" >
+        <div class="first">
+            <label for="mode" >Enter mode name </label>
+            <input type="text" name="mode" id="mode" value=""/>
+            <br/>
+        </div>
+
+
+
+
+        <input type="submit" value="Go!"/>
+
+    </form>
+</div>
+
+<div class="third">
+
+
+    <div class="table-summary">
+        <table border="1"  >
+            <tr>
+                <th>Player</th>
+                <th>God</th>
+                <th>KD on god</th>
+                <th>Win rate on god in conquest</th>
+                <th>Matches on god in conquest</th>
+                <th>KD overall</th>
+                <th>Win rate in conquest</th>
+                <th>Matches in conquest</th>
+                <th>Hours in game</th>
+            </tr>
+
+            <tr class="my">
+                <td  th:text="${list.get(0)}"></td>
+                <td  th:text="${list.get(1)}"></td>
+                <td  th:text="${list.get(2)}"></td>
+                <td  th:text="${list.get(3)}"></td>
+                <td  th:text="${list.get(4)}"></td>
+                <td  th:text="${list.get(5)}"></td>
+                <td  th:text="${list.get(6)}"></td>
+                <td  th:text="${list.get(7)}"></td>
+                <td  th:text="${list.get(8)}"></td>
+            </tr>
+            <tr class="my">
+                <td  th:text="${list.get(9)}"></td>
+                <td  th:text="${list.get(10)}"></td>
+                <td  th:text="${list.get(11)}"></td>
+                <td  th:text="${list.get(12)}"></td>
+                <td  th:text="${list.get(13)}"></td>
+                <td  th:text="${list.get(14)}"></td>
+                <td  th:text="${list.get(15)}"></td>
+                <td  th:text="${list.get(16)}"></td>
+                <td  th:text="${list.get(17)}"></td>
+            </tr>
+            <tr class="my">
+                <td  th:text="${list.get(18)}"></td>
+                <td  th:text="${list.get(19)}"></td>
+                <td  th:text="${list.get(20)}"></td>
+                <td  th:text="${list.get(21)}"></td>
+                <td  th:text="${list.get(22)}"></td>
+                <td  th:text="${list.get(23)}"></td>
+                <td  th:text="${list.get(24)}"></td>
+                <td  th:text="${list.get(25)}"></td>
+                <td  th:text="${list.get(26)}"></td>
+            </tr>
+            <tr class="my">
+                <td  th:text="${list.get(27)}"></td>
+                <td  th:text="${list.get(28)}"></td>
+                <td  th:text="${list.get(29)}"></td>
+                <td  th:text="${list.get(30)}"></td>
+                <td  th:text="${list.get(31)}"></td>
+                <td  th:text="${list.get(32)}"></td>
+                <td  th:text="${list.get(33)}"></td>
+                <td  th:text="${list.get(34)}"></td>
+                <td  th:text="${list.get(35)}"></td>
+            </tr>
+            <tr class="my">
+                <td  th:text="${list.get(36)}"></td>
+                <td  th:text="${list.get(37)}"></td>
+                <td  th:text="${list.get(38)}"></td>
+                <td  th:text="${list.get(39)}"></td>
+                <td  th:text="${list.get(40)}"></td>
+                <td  th:text="${list.get(41)}"></td>
+                <td  th:text="${list.get(42)}"></td>
+                <td  th:text="${list.get(43)}"></td>
+                <td  th:text="${list.get(44)}"></td>
+            </tr>
+            <tr class="enemy">
+                <td  th:text="${list.get(45)}"></td>
+                <td  th:text="${list.get(46)}"></td>
+                <td  th:text="${list.get(47)}"></td>
+                <td  th:text="${list.get(48)}"></td>
+                <td  th:text="${list.get(49)}"></td>
+                <td  th:text="${list.get(50)}"></td>
+                <td  th:text="${list.get(51)}"></td>
+                <td  th:text="${list.get(52)}"></td>
+                <td  th:text="${list.get(53)}"></td>
+            </tr>
+            <tr class="enemy">
+                <td  th:text="${list.get(54)}"></td>
+                <td  th:text="${list.get(55)}"></td>
+                <td  th:text="${list.get(56)}"></td>
+                <td  th:text="${list.get(57)}"></td>
+                <td  th:text="${list.get(58)}"></td>
+                <td  th:text="${list.get(59)}"></td>
+                <td  th:text="${list.get(60)}"></td>
+                <td  th:text="${list.get(61)}"></td>
+                <td  th:text="${list.get(62)}"></td>
+            </tr>
+            <tr class="enemy">
+                <td  th:text="${list.get(63)}"></td>
+                <td  th:text="${list.get(64)}"></td>
+                <td  th:text="${list.get(65)}"></td>
+                <td  th:text="${list.get(66)}"></td>
+                <td  th:text="${list.get(67)}"></td>
+                <td  th:text="${list.get(68)}"></td>
+                <td  th:text="${list.get(69)}"></td>
+                <td  th:text="${list.get(70)}"></td>
+                <td  th:text="${list.get(71)}"></td>
+            </tr>
+            <tr class="enemy">
+                <td  th:text="${list.get(72)}"></td>
+                <td  th:text="${list.get(73)}"></td>
+                <td  th:text="${list.get(74)}"></td>
+                <td  th:text="${list.get(75)}"></td>
+                <td  th:text="${list.get(76)}"></td>
+                <td  th:text="${list.get(77)}"></td>
+                <td  th:text="${list.get(78)}"></td>
+                <td  th:text="${list.get(79)}"></td>
+                <td  th:text="${list.get(80)}"></td>
+            </tr>
+            <tr class="enemy">
+                <td  th:text="${list.get(81)}"></td>
+                <td  th:text="${list.get(82)}"></td>
+                <td  th:text="${list.get(83)}"></td>
+                <td  th:text="${list.get(84)}"></td>
+                <td  th:text="${list.get(85)}"></td>
+                <td  th:text="${list.get(86)}"></td>
+                <td  th:text="${list.get(87)}"></td>
+                <td  th:text="${list.get(88)}"></td>
+                <td  th:text="${list.get(89)}"></td>
+            </tr>
+        </table>
+    </div>
+    <table border="1" >
+        <tr>
+            <th class="my">Team green</th>
+            <th class="enemy">Team red</th>
+        </tr>
+        <tr>
+            <td class="my" th:text="${t1}"></td>
+            <td class="enemy" th:text="${t2}"></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
+
+
+
+
